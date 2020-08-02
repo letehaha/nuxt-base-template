@@ -1,0 +1,43 @@
+{
+  "name": "base-template",
+  "version": "1.0.0",
+  "description": "Nuxt.js base project",
+  "author": "Dmitry Sviridenko <letehaha@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "npm run dev",
+    "start:prod": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "npm run lint:styles && npm run lint:scripts",
+    "lint:scripts": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:styles": "stylelint \"src/**/*.{vue,css,scss}\" --max-warnings=0",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "^6.13.1",
+    "lodash": "^4.17.15",
+    "vuelidate": "^0.7.5",
+    "@nuxtjs/browserconfig": "0.0.12"
+  },
+  "devDependencies": {
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.3.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.11",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "file-loader": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "url-loader": "^2.3.0",
+    "stylelint": "^13.6.0",
+    "stylelint-declaration-strict-value": "^1.5.0",
+    "stylelint-scss": "^3.17.2"
+  }
+}
