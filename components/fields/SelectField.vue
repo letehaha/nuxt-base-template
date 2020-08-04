@@ -34,7 +34,8 @@
             <button
               :key="item"
               :class="{
-                'select-field__dropdown-item--highlighed': selectedValue === item
+                'select-field__dropdown-item--highlighed':
+                  selectedValue === item
               }"
               class="select-field__dropdown-item"
               @click="selectItem(i)"
@@ -85,19 +86,23 @@ export default {
     labels() {
       if (Array.isArray(this.values[0])) {
         if (this.withSearchField && this.filterQuery) {
-          return this.values.filter(str => !str.toLowerCase().search(this.filterQuery));
+          return this.values
+            .filter(str => !str.toLowerCase().search(this.filterQuery));
         }
         return this.values;
       }
       if (typeof this.values[0] === 'object' && this.values[0] !== null) {
-        const values = this.values.map(obj => (this.labelKey ? obj[this.labelKey] : obj.label));
+        const values = this.values
+          .map(obj => (this.labelKey ? obj[this.labelKey] : obj.label));
         if (this.withSearchField && this.filterQuery) {
-          return values.filter(str => !str.toLowerCase().search(this.filterQuery));
+          return values
+            .filter(str => !str.toLowerCase().search(this.filterQuery));
         }
         return values;
       }
       if (this.withSearchField && this.filterQuery) {
-        return this.values.filter(str => !str.toLowerCase().search(this.filterQuery));
+        return this.values
+          .filter(str => !str.toLowerCase().search(this.filterQuery));
       }
       return this.values;
     },
@@ -105,7 +110,9 @@ export default {
   mounted() {
     if (this.value) {
       if (typeof this.values[0] === 'object' && this.values[0] !== null) {
-        this.selectedValue = this.labelKey ? this.value[this.labelKey] : this.value.label;
+        this.selectedValue = this.labelKey
+          ? this.value[this.labelKey]
+          : this.value.label;
       } else {
         this.selectedValue = this.value;
       }
@@ -138,13 +145,14 @@ export default {
   width: 100%;
   flex: 1;
 }
+
 .select-field__input {
   font-size: 16px;
   line-height: 1;
-  color: #fff;
+  color: #ffffff;
   padding: 16px 20px;
-  background-color: #000;
-  border: 1px solid #000;
+  background-color: #000000;
+  border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
@@ -152,20 +160,23 @@ export default {
   cursor: pointer;
 
   .select-field--active & {
-    border-color: #fff;
+    border-color: #ffffff;
   }
 }
+
 .select-field__label {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 10px;
   display: block;
 }
+
 .select-field__wrapper {
   position: relative;
 }
+
 .select-field__dropdown {
   position: absolute;
   top: 100%;
@@ -174,8 +185,8 @@ export default {
   visibility: hidden;
   opacity: 0;
   padding: 8px 0;
-  transition: .2s ease-out;
-  background-color: #fff;
+  transition: 0.2s ease-out;
+  background-color: #ffffff;
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.08);
   z-index: $z-select-field;
   border-radius: 4px;
@@ -185,19 +196,21 @@ export default {
     opacity: 1;
   }
 }
+
 .select-field__dropdown-values {
   overflow: auto;
   max-height: 200px;
 }
+
 .select-field__dropdown-item {
   display: flex;
   align-items: center;
-  transition: background-color .3s ease-out;
+  transition: background-color 0.3s ease-out;
   border: none;
-  background-color: #fff;
+  background-color: #ffffff;
   font-size: 14px;
   line-height: 1.2;
-  color: #000;
+  color: #000000;
   padding: 16px;
   width: 100%;
   text-align: left;
@@ -206,13 +219,14 @@ export default {
   cursor: pointer;
 
   &--highlighed {
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   &:hover {
-    background-color: #fff;
+    background-color: #ffffff;
   }
 }
+
 .select-field__arrow {
   position: absolute;
   width: 20px;
@@ -226,7 +240,7 @@ export default {
     position: absolute;
     width: 8px;
     height: 2px;
-    background-color: #000;
+    background-color: #000000;
     border-radius: 2px;
     transform: rotate(45deg);
     top: 10px;
@@ -244,8 +258,9 @@ export default {
     &:after { transform: rotate(-45deg); }
   }
 }
+
 .select-field__err-mes {
-  color: theme-color(error);
+  color: red;
   font-size: 12px;
 }
 </style>

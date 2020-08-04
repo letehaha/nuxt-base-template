@@ -1,4 +1,3 @@
-import { globalize } from '@/vue/filters/globalize';
 import safeGet from 'lodash/get';
 import isObject from 'lodash/isObject';
 
@@ -85,10 +84,8 @@ export default {
 
       for (const rule of Object.keys(field.$params)) {
         if (!field[rule]) {
-          return globalize('validation.field-error', {
-            context: rule,
-            ...options,
-          });
+          // toDO: investigate how to get access to i18n.$t()
+          return { ...options };
         }
       }
       return '';

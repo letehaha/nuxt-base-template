@@ -69,7 +69,7 @@ export default {
 
 .tick-field__custom {
   background-color: transparent;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 4px;
   width: 20px;
   height: 20px;
@@ -84,7 +84,7 @@ export default {
     content: '';
     position: absolute;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 2px;
     display: none;
   }
@@ -113,14 +113,15 @@ export default {
     }
   }
 }
+
 .tick-field__label {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #000;
+  color: #000000;
 
   .tick-field__input:checked ~ & {
-    color: #fff;
+    color: #ffffff;
   }
 }
 </style>

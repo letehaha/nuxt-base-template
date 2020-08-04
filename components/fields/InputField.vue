@@ -84,45 +84,48 @@ export default {
 .input-field__input {
   font-size: 16px;
   line-height: 1;
-  color: #fff;
+  color: #ffffff;
   padding: 15px 20px;
-  background-color: #000;
-  border: 1px solid #000;
+  background-color: #000000;
+  border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
   width: 100%;
 
-  @include placeholder-custom(rgba(#000, 0.4));
+  @include placeholder-custom(rgba(#000000, 0.4));
 
   &:focus {
-    border-color: #fff;
+    border-color: #ffffff;
   }
 }
+
 .input-field__label {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 10px;
   display: block;
 }
+
 .input-field__err-mes {
-  color: #da3030;
+  color: red;
   font-size: 14px;
   margin-top: 4px;
   margin-left: 8px;
 }
+
 .input-fields__sublabel {
   position: absolute;
   right: 0;
   top: 0;
   font-size: 16px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
 
   a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
   }
 }

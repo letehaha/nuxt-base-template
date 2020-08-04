@@ -104,28 +104,31 @@ export default {
     border-style: dashed;
   }
 }
+
 .text-field__label {
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 13px;
   line-height: 1.2;
-  color: #000;
+  color: #000000;
 }
+
 .text-field__input {
   width: 100%;
   position: relative;
   padding: 16px 16px 24px;
-  caret-color: #000;
-  background-color: #fff;
-  border: 1px solid #000;
+  caret-color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
   border-radius: 4px;
   transition: all 0s, border-color 0.2s ease-out;
   resize: none;
   outline: none;
-  color: #000;
+  color: #000000;
 
-  @include placeholder-custom(rgba(#000, 0.4));
+  @include placeholder-custom(rgba(#000000, 0.4));
 }
+
 .text-field__err-mes {
   color: red;
   font-size: 12px;

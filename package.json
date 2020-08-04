@@ -4,6 +4,12 @@
   "description": "Nuxt.js base project",
   "author": "Dmitry Sviridenko <letehaha@gmail.com>",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint",
+      "pre-commit": "npm run lint"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -12,7 +18,7 @@
     "generate": "nuxt generate",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "lint:scripts": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:styles": "stylelint \"src/**/*.{vue,css,scss}\" --max-warnings=0",
+    "lint:styles": "stylelint \"**/*.{vue,css,scss}\" --max-warnings=0",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -20,6 +26,7 @@
     "lodash": "^4.17.19",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0",
+    "nuxt-i18n": "^6.13.5",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
@@ -35,6 +42,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
     "stylelint": "^13.6.1",

@@ -58,8 +58,8 @@ export default {
 }
 
 .radio-check-field__custom {
-  background: #fff;
-  border: 1px solid #000;
+  background: #ffffff;
+  border: 1px solid #000000;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -106,6 +106,6 @@ export default {
   font-weight: 400;
   font-size: 13px;
   line-height: 1.7;
-  color: #000;
+  color: #000000;
 }
 </style>

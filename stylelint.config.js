@@ -206,7 +206,7 @@ module.exports = {
      */
     'scale-unlimited/declaration-strict-value': [
       [
-        '/color/',
+        // '/color/',
         'z-index',
         'fill',
         'stroke',

@@ -48,14 +48,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$transition: box-shadow .2s ease-out;
+$transition: box-shadow 0.2s ease-out;
 
 .button {
   font-weight: 700;
   font-size: 17px;
   line-height: 1.2;
   border: 1px solid transparent;
-  color: #fff;
+  color: #ffffff;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
@@ -70,7 +70,7 @@ $transition: box-shadow .2s ease-out;
   }
 
   &.button--has-hover {
-    transition: $transition, transform .2s ease-out;
+    transition: $transition, transform 0.2s ease-out;
 
     &:hover {
       transform: scale(1.02);
@@ -92,7 +92,7 @@ $transition: box-shadow .2s ease-out;
   }
 
   &.button--disabled {
-    background-color: #ccc;
+    background-color: #cccccc;
     cursor: not-allowed;
   }
 }
