@@ -5,17 +5,17 @@ export const state = () => ({
 });
 
 export const getters = {
-  [exampleVuexTypes.GET_EXAMPLE]: (state, getters) => state.example,
-}
+  [exampleVuexTypes.GET_EXAMPLE]: (localState) => localState.example,
+};
 
 export const mutations = {
-  [exampleVuexTypes.SET_EXAMPLE](state, example) {
-    state.example = example;
+  [exampleVuexTypes.SET_EXAMPLE](localState, example) {
+    localState.example = example;
   },
-}
+};
 
 export const actions = {
-  [exampleVuexTypes.FETCH_EXAMPLE]({ state, commit }, param) {
-    commit(exampleVuexTypes.SET_EXAMPLE, param)
+  [exampleVuexTypes.FETCH_EXAMPLE]({ commit }, param) {
+    commit(exampleVuexTypes.SET_EXAMPLE, param);
   },
-}
+};
