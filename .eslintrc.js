@@ -60,6 +60,9 @@ module.exports = {
       'ignoreHTMLAttributeValues': false,
       'ignoreHTMLTextContents': false,
     }],
+    'import/no-unresolved': ['error', {
+      ignore: ['\.svg']
+    }],
   },
   settings: {
     'import/core-modules': [
