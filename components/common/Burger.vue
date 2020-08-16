@@ -2,11 +2,12 @@
   <div
     class="burger"
     :class="{ 'burger--opened': isActive }"
+    :style="burgerStyles"
     @click="onClick"
   >
-    <i />
-    <i />
-    <i />
+    <i :style="linesStyles" />
+    <i :style="linesStyles" />
+    <i :style="linesStyles" />
   </div>
 </template>
 
@@ -41,6 +42,8 @@
 export default {
   props: {
     isActive: { type: Boolean, required: true },
+    linesStyles: { type: Object, required: false, default: () => ({}) },
+    burgerStyles: { type: Object, required: false, default: () => ({}) },
   },
   methods: {
     onClick() {
