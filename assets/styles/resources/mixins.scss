@@ -29,12 +29,12 @@
 }
 
 @mixin respond-to-custom-height($media, $direction: max) {
-  @media only screen and (#{$direction}-height: $media) {
+  @media only screen and (#{$direction}-height: #{$media}px) {
     @content;
   }
 }
 @mixin respond-to-custom-width($media, $direction: max) {
-  @media only screen and (#{$direction}-width: $media) {
+  @media only screen and (#{$direction}-width: #{$media}px) {
     @content;
   }
 }
