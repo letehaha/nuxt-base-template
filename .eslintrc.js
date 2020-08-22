@@ -68,6 +68,7 @@ module.exports = {
     'import/core-modules': [
       // for disable ''vue' should be listed in the project's dependencies' error
       'vue',
+      'vuex',
     ],
     'import/resolver': 'nuxt',
   },
