@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <Button />
+    <Button>Hello</Button>
   </section>
 </template>
 
