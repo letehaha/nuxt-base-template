@@ -65,7 +65,7 @@ $transition: box-shadow 0.2s ease-out;
   padding: 12px 30px;
   transition: $transition;
 
-  @include respond-to-custom(550px) {
+  @include respond-to-custom-width(550px) {
     font-size: 14px;
   }
 

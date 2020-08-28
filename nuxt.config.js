@@ -12,7 +12,12 @@ module.exports = {
     [
       'nuxt-i18n',
       {
-        locales: 'en',
+        locales: [
+          {
+            code: 'en',
+            file: 'en.json',
+          },
+        ],
         defaultLocale: 'en',
         langDir: 'locales/',
         lazy: true,
