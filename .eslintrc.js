@@ -35,12 +35,16 @@ module.exports = {
     }],
     'no-unused-vars': 'warn',
     'arrow-body-style': 'warn',
-    'import/no-named-as-default': 'off',
     'func-names': [1, 'as-needed'],
     'no-underscore-dangle': 'off',
     'class-methods-use-this': 'off',
     'arrow-parens': 'off',
+    'import/no-named-as-default': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-dynamic-require': 'off',
+    'import/no-unresolved': ['error', {
+      ignore: ['\.svg']
+    }],
     'no-restricted-syntax': 'off',
     'global-require': 'off',
     'no-plusplus': 'off',
@@ -59,9 +63,6 @@ module.exports = {
       'ignoreRegExpLiterals': true,
       'ignoreHTMLAttributeValues': false,
       'ignoreHTMLTextContents': false,
-    }],
-    'import/no-unresolved': ['error', {
-      ignore: ['\.svg']
     }],
   },
   settings: {
