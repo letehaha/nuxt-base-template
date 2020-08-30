@@ -86,7 +86,7 @@ export default {
 <style lang="scss" scoped>
 .language-selector {
   padding: 14px 16px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 4px;
   position: relative;
   height: 48px;
@@ -94,21 +94,22 @@ export default {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
-  color: #fff;
-  background-color: #000;
+  color: #ffffff;
+  background-color: #000000;
   cursor: pointer;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   width: 182px;
 
   &:hover {
-    background-color: #000;
+    background-color: #000000;
   }
 
   display: flex;
   align-items: center;
 }
+
 .language-selector--active {
-  background-color: #000;
+  background-color: #000000;
 }
 
 .language-selector__selected {
@@ -135,7 +136,7 @@ export default {
   visibility: hidden;
   opacity: 0;
   transition: 0.2s ease-out;
-  background-color: #000;
+  background-color: #000000;
 
   .language-selector--to-bottom & {
     top: calc(100% + 5px);
@@ -159,7 +160,7 @@ export default {
   position: relative;
 
   &:hover {
-    background-color: #000;
+    background-color: #000000;
   }
 
   img {
@@ -168,24 +169,27 @@ export default {
     flex: none;
   }
 }
+
 .language-selector__lang--selected {
-  background-color: #000;
+  background-color: #000000;
 
   &:after,
   &:before {
     content: '';
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 2px;
     height: 2px;
     position: absolute;
     right: 14px;
   }
+
   &:after {
     width: 8px;
     right: 26px;
     top: 17px;
     transform: rotate(45deg);
   }
+
   &:before {
     width: 16px;
     transform: rotate(-45deg);
@@ -197,7 +201,7 @@ export default {
   background-color: transparent;
   font-size: 14px;
   line-height: 1.2;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
   text-align: left;
   overflow: hidden;
@@ -217,24 +221,28 @@ export default {
     position: absolute;
     width: 9px;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 2px;
-    transition: .1s ease-out;
+    transition: 0.1s ease-out;
   }
+
   &:after {
     transform: rotate(-45deg);
     left: 9px;
     top: 9px;
   }
+
   &:before {
     transform: rotate(45deg);
     left: 3px;
     top: 9px;
   }
+
   &--opened {
     &:after {
       transform: rotate(45deg);
     }
+
     &:before {
       transform: rotate(-45deg);
     }

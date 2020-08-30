@@ -45,6 +45,9 @@ module.exports = {
     'import/no-unresolved': ['error', {
       ignore: ['\.svg']
     }],
+    'import/extensions': ['error', {
+      svg: 'never',
+    }],
     'no-restricted-syntax': 'off',
     'global-require': 'off',
     'no-plusplus': 'off',
