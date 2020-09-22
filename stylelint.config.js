@@ -110,7 +110,6 @@ module.exports = {
     'function-url-quotes': ['always', { severity: 'warning' }],
     'function-whitespace-after': ['always', { severity: 'warning' }],
 
-    'number-leading-zero': ['always', { severity: 'warning' }],
     'number-no-trailing-zeros': [true, { severity: 'warning' }],
 
     'string-quotes': ['single', { severity: 'warning' }],
@@ -158,11 +157,6 @@ module.exports = {
     'selector-list-comma-newline-after': ['always', { severity: 'warning' }],
     'selector-list-comma-space-after': ['always-single-line', { severity: 'warning' }],
     'selector-list-comma-space-before': ['never', { severity: 'warning' }],
-
-    'rule-empty-line-before': ['always-multi-line', {
-      severity: 'warning',
-      ignore: ['after-comment', 'first-nested'],
-    }],
 
     'media-feature-colon-space-after': ['always', { severity: 'warning' }],
     'media-feature-colon-space-before': ['never', { severity: 'warning' }],
