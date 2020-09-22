@@ -4,7 +4,6 @@
 process.env.NUXT_ENV_DEVALUE_LOG_LIMIT = -1;
 
 module.exports = {
-  mode: 'universal',
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
