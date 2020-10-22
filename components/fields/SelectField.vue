@@ -70,12 +70,13 @@ export default {
   props: {
     label: { type: String, default: undefined },
     value: { type: [Object, String], default: undefined },
-    values: { type: Array, required: true },
+    values: { type: [Array, Object], required: true },
     labelKey: { type: String, default: undefined },
     placeholder: { type: String, default: undefined },
     withSearchField: { type: Boolean, default: false },
     errorMessage: { type: String, default: undefined },
     position: { type: String, default: POSITIONS.bottom },
+    isValuePreselected: { type: Boolean, default: false },
   },
   data: () => ({
     isDropdownOpened: false,
@@ -116,6 +117,9 @@ export default {
       } else {
         this.selectedValue = this.value;
       }
+    } else if (this.isValuePreselected) {
+      // eslint-disable-next-line prefer-destructuring
+      this.selectedValue = this.labels[0];
     }
   },
   methods: {
