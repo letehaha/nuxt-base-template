@@ -67,6 +67,9 @@ module.exports = {
       'ignoreHTMLAttributeValues': false,
       'ignoreHTMLTextContents': false,
     }],
+    'no-shadow': ['error', {
+      'allow': ['state'],
+    }],
   },
   settings: {
     'import/core-modules': [
