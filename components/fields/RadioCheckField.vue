@@ -4,11 +4,9 @@
     :class="{
       'radio-check-field--disabled': $attrs.disabled,
     }"
-    :for="id"
     :title="label"
   >
     <input
-      :id="id"
       class="radio-check-field__input"
       type="checkbox"
       :checked="value"
@@ -31,11 +29,6 @@ export default {
     label: { type: String, default: undefined },
     value: { type: [String, Boolean], required: true },
     readonly: { type: Boolean, default: false },
-  },
-  computed: {
-    id() {
-      return `radio-check-field-${this._uid}`;
-    },
   },
 };
 </script>
