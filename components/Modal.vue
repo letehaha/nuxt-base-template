@@ -14,10 +14,8 @@
 </template>
 
 <script>
-import ExampleModal from '@/components/modals/Example';
-
 export const MODAL_TYPES = Object.freeze({
-  exampleModal: 'ExampleModal',
+  exampleModal: () => import('@/components/modals/Example'),
 });
 
 const EVENTS = {
@@ -25,9 +23,6 @@ const EVENTS = {
 };
 
 export default {
-  components: {
-    ExampleModal,
-  },
   props: {
     isActive: { type: Boolean, default: false },
     /**
