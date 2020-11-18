@@ -192,7 +192,7 @@ export default {
   transition: 0.2s ease-out;
   background-color: #ffffff;
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.08);
-  z-index: $z-select-field;
+  z-index: var(--z-select-field);
   border-radius: 4px;
 
   .select-field--active & {

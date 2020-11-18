@@ -1,0 +1,32 @@
+@function hextorgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  // colors
+  @each $cssVar, $value in (
+    --white-color: #fff,
+  ) {
+    #{$cssVar}: $value;
+    // in case you wanna use rgba with css variables, you need to use varname-rgb
+    #{$cssVar}-rgb: #{hextorgb($value)};
+  }
+
+  --container-width: 1200px;
+  --container-padding: 32px;
+  --header-height: 61px;
+  --footer-height: 280px;
+  --container-right-corner: calc(
+    ((100vw - var(--container-width)) / 2) + var(--container-width)
+  );
+  --container-left-corner: calc(((100vw - var(--container-width)) / 2));
+
+  @include respond-to-custom-width(840) {
+    --container-padding: 24px;
+  }
+
+  // z-indexes
+  --z-select-field: 1;
+  --z-scroll-shadow-vertical: 1;
+  --z-modal: 10;
+}
