@@ -1,0 +1,32 @@
+.app-scroll-shadow-vertical {
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    left: -10px;
+    bottom: 0;
+    top: auto;
+    box-shadow: 0 10px 45px 30px #000;
+    opacity: 0;
+    z-index: $z-scroll-shadow-vertical;
+    transition: opacity .2s ease-out;
+  }
+  &:before {
+    top: 0;
+    bottom: auto;
+  }
+}
+.app-scroll-shadow-vertical--bottom {
+  &:after {
+    opacity: 1;
+  }
+}
+
+.app-scroll-shadow-vertical--top {
+  &:before {
+    opacity: 1;
+  }
+}
