@@ -6,7 +6,7 @@
   >
     <component
       :is="data.type"
-      :data="data.data"
+      v-bind="data.data"
       class="modal__component"
       @close-modal="$emit(EVENTS.close)"
     />
