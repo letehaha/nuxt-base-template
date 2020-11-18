@@ -75,8 +75,8 @@ module.exports = {
   ** Additional vue js methods
   */
   plugins: [
-    '~/plugins/directives/index.js',
-    '~/plugins/filters/index.js',
+    { src: '~/plugins/directives/index.js', ssr: false },
+    { src: '~/plugins/filters/index.js', ssr: false },
   ],
   /*
   ** Global styles
