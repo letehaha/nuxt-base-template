@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@nuxtjs/browserconfig": "0.0.13",
+    "detect-browser": "^5.2.0",
     "lodash": "^4.17.19",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0",
