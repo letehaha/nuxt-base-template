@@ -1,8 +1,15 @@
+import { rootVuexTypes } from '@/store';
 import { detect } from 'detect-browser';
+
+function isTouchDevice() {
+  return ('ontouchstart' in window)
+    || (navigator.maxTouchPoints > 0)
+    || (navigator.msMaxTouchPoints > 0);
+}
 
 // to check all possible browsers, os and environment types check TS types here:
 // https://github.com/DamonOehlman/detect-browser/blob/master/src/index.ts
-window.onNuxtReady(() => {
+window.onNuxtReady(({ $store }) => {
   const browser = detect();
 
   document.documentElement.classList.add(`is-${browser.type}`);
@@ -28,5 +35,15 @@ window.onNuxtReady(() => {
   }
   if (browser.os.includes('Chrome OS')) {
     document.documentElement.classList.add('is-chromeos');
+  }
+
+  const isTouchScreen = isTouchDevice();
+
+  $store.commit(rootVuexTypes.SET_IS_TOUCH_DEVICE, isTouchScreen);
+
+  if (isTouchScreen) {
+    document.documentElement.classList.add('is-touch-screen');
+  } else {
+    document.documentElement.classList.add('is-not-touch-screen');
   }
 });

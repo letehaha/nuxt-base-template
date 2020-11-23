@@ -75,7 +75,7 @@ module.exports = {
   ** Additional vue js methods
   */
   plugins: [
-    { src: '~/plugins/detect-browser.js', ssr: false },
+    { src: '~/plugins/detect-client.js', ssr: false },
     { src: '~/plugins/directives/index.js', ssr: false },
     { src: '~/plugins/filters/index.js', ssr: false },
   ],
