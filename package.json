@@ -28,6 +28,7 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.0",
     "nuxt-i18n": "^6.13.5",
+    "qrcode.vue": "^1.7.0",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
